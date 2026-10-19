@@ -1,0 +1,198 @@
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayStation Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<div id="invoiceModal" class="modal">
+
+    <div class="modal-content">
+
+        <img src="LO.jpg"
+            class="invoice-logo"
+            alt="PlayStation Logo">
+
+        <h2>فاتورة الجلسة</h2>
+
+        <hr>
+
+        <p><strong>🎮 الجهاز:</strong> <span id="invDevice"></span></p>
+
+        <p><strong>👤 العميل:</strong> <span id="invCustomer"></span></p>
+
+        <p><strong>⏱️ المدة:</strong> <span id="invTime"></span></p>
+
+        <p><strong>💰 الإجمالي:</strong> <span id="invTotal"></span> جنيه</p>
+
+        <button onclick="closeInvoice()">إغلاق</button>
+
+    </div>
+
+</div>
+<div class="developer">
+    <img src="mo.jpeg" alt="Developer">
+
+    <div>
+        
+        <span>المهندس محمد صفوت </span>
+    </div>
+</div>
+<body>
+
+    <h1>🎮 PlayStation Manager R2</h1>
+
+    <div class="container">
+
+        <!-- الجهاز الأول -->
+        <div class="card">
+
+            <h2>🎮 PS5-1</h2>
+
+            <p id="status1" class="status">🟢 متاح</p>
+
+            <input type="text" id="name1" placeholder="اسم العميل">
+
+            <select id="type1">
+                <option value="hour">بالساعة</option>
+                <option value="open">مفتوح</option>
+            </select>
+
+            <input type="number" id="hours1" placeholder="عدد الساعات">
+
+            <input type="number" id="price1" value="30">
+
+            <p>⏱️ الوقت : <span id="time1">00:00:00</span></p>
+
+            <p>💰 الإجمالي : <span id="total1">0</span> جنيه</p>
+
+            <button id="btn1" onclick="toggleSession(1)">
+                ابدأ الجلسة
+            </button>
+
+        </div>
+
+        <!-- الجهاز الثاني -->
+        <div class="card">
+
+            <h2>🎮 PS5-2</h2>
+
+            <p id="status2" class="status">🟢 متاح</p>
+
+            <input type="text" id="name2" placeholder="اسم العميل">
+
+            <select id="type2">
+                <option value="hour">بالساعة</option>
+                <option value="open">مفتوح</option>
+            </select>
+
+            <input type="number" id="hours2" placeholder="عدد الساعات">
+
+            <input type="number" id="price2" value="30">
+
+            <p>⏱️ الوقت : <span id="time2">00:00:00</span></p>
+
+            <p>💰 الإجمالي : <span id="total2">0</span> جنيه</p>
+
+            <button id="btn2" onclick="toggleSession(2)">
+                ابدأ الجلسة
+            </button>
+
+        </div>
+
+        <!-- الجهاز الثالث -->
+        <div class="card">
+
+            <h2>🎮 PS5-3</h2>
+
+            <p id="status3" class="status">🟢 متاح</p>
+
+            <input type="text" id="name3" placeholder="اسم العميل">
+
+            <select id="type3">
+                <option value="hour">بالساعة</option>
+                <option value="open">مفتوح</option>
+            </select>
+
+            <input type="number" id="hours3" placeholder="عدد الساعات">
+
+            <input type="number" id="price3" value="30">
+
+            <p>⏱️ الوقت : <span id="time3">00:00:00</span></p>
+
+            <p>💰 الإجمالي : <span id="total3">0</span> جنيه</p>
+
+            <button id="btn3" onclick="toggleSession(3)">
+                ابدأ الجلسة
+            </button>
+
+        </div>
+
+        <!-- الجهاز الرابع -->
+        <div class="card">
+
+            <h2>🎮 PS5-4</h2>
+
+            <p id="status4" class="status">🟢 متاح</p>
+
+            <input type="text" id="name4" placeholder="اسم العميل">
+
+            <select id="type4">
+                <option value="hour">بالساعة</option>
+                <option value="open">مفتوح</option>
+            </select>
+
+            <input type="number" id="hours4" placeholder="عدد الساعات">
+
+            <input type="number" id="price4" value="30">
+
+            <p>⏱️ الوقت : <span id="time4">00:00:00</span></p>
+
+            <p>💰 الإجمالي : <span id="total4">0</span> جنيه</p>
+
+            <button id="btn4" onclick="toggleSession(4)">
+                ابدأ الجلسة
+            </button>
+
+        </div>
+
+        <!-- الجهاز الخامس -->
+        <div class="card">
+
+            <h2>🎮 PS5-5</h2>
+
+            <p id="status5" class="status">🟢 متاح</p>
+
+            <input type="text" id="name5" placeholder="اسم العميل">
+
+            <select id="type5">
+                <option value="hour">بالساعة</option>
+                <option value="open">مفتوح</option>
+            </select>
+
+            <input type="number" id="hours5" placeholder="عدد الساعات">
+
+            <input type="number" id="price5" value="30">
+
+            <p>⏱️ الوقت : <span id="time5">00:00:00</span></p>
+
+            <p>💰 الإجمالي : <span id="total5">0</span> جنيه</p>
+
+            <button id="btn5" onclick="toggleSession(5)">
+                ابدأ الجلسة
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
